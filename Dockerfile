@@ -5,6 +5,6 @@ ARG DOCKER_REGISTRY=docker.io
 ARG FROM_IMG_HASH=""
 FROM ${DOCKER_REGISTRY}/${DOCKER_REPO}/${FROM_IMG_NAME}:${FROM_IMG_TAG}${DOCKER_IMG_HASH}
 
-RUN apt-get install -y libibverbs-dev
+RUN apt-get install -y libibverbs-dev xsltproc pkgconf
 USER user
 RUN eb OpenFOAM-v1712-foss-2017b.eb --robot
